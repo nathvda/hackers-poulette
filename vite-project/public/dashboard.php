@@ -12,7 +12,6 @@ session_start();
     <meta name="description" content="BeCode Project">
     <link rel="stylesheet" href="../public/assets/scss/style.css">
     <link rel="shortcut icon" href="#" type="image/x-icon">
-    <script defer src="../public/assets/scripts/main.js" type="module"></script>
     <title>Hackers Poulette - Administrative Dashboard</title>
 </head>
 <body>
