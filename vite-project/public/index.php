@@ -25,7 +25,7 @@ if(isset($_POST['submit']) && empty($_POST['name']) && empty($_POST['email'])){
     <main>
         <h3>Contact us!</h3>
         <form id="contact" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-            <?php echo (isset($_SESSION['success'])) ? '<span class="error">' . $_SESSION['success'] . '</span>' : "" ?>
+            <?php echo (isset($_POST['submit']) && isset($_SESSION['success'])) ? '<span class="success">' . $_SESSION['success'] . '</span>' : "" ?>
             <label for="lastNamejdke" class="req">lastname</label>
             <input type="text" name="lastNamejdke" id="lastNamejdke" value="<?php echo $_POST['lastNamejdke'] ?? "" ?>" required>
             <?php echo (isset($comm['lastNamejdke'])) ? '<span class="error">'.$comm['lastNamejdke'].'</span>' :  "" ?>

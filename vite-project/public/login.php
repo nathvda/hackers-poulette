@@ -24,8 +24,7 @@ if(isset($_POST['submit']) && empty($_POST['name']) && empty($_POST['email'])){
 <body>
     <main>
         <h3>Access dashboard</h3>
-        <form id="contact" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-            <?php echo (isset($_SESSION['success'])) ? '<span class="error">' . $_SESSION['success'] . '</span>' : "" ?>
+        <form id="login" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             <label for="usernamejdke" class="req">Username</label>
             <input type="text" name="usernamejdke" id="usernamejdke" value="<?php echo $_POST['usernamejdke'] ?? "" ?>" required>
             <?php echo (isset($comm['usernamejdke'])) ? '<span class="error">'.$comm['usernamejdke'].'</span>' :  "" ?>
