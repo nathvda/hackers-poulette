@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +18,11 @@ session_start();
 <body>
     <header>connected as <?php echo (isset($_SESSION['user'])) ? htmlspecialchars($_SESSION['user']) : 'No one'; ?> - <a href="../public/index.php">Back to homepage</a></header>
     <main class="dashboard">
-        <aside><h2>Actions</h2></aside>
-        <main> <?php include '../includes/_comments.php'; ?></main> 
+        <section class="comments__wrap"> <?php include '../includes/_comments.php'; ?></section>
     </main>
 </body>
 </html>
+
 <?php
 if(!isset($_SESSION['user'])){
 

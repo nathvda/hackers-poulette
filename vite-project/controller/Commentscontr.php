@@ -10,4 +10,24 @@ class Commentscontr extends Comments{
 
     }
 
+    public function deleteComment($id){
+
+        $this->eraseComment($id);
+
+    }
+
+    public function changeStatus($id,$value){
+
+        if ($value === "1"){
+            $bool = false;
+        } 
+
+        if ($value === "0"){
+            $bool = true;
+        }
+
+        $this->updateStatus($id, $bool);
+
+    }
+
 }
