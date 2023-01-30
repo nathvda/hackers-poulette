@@ -6,7 +6,9 @@ class Users extends DbConnect{
 
     protected function getUser(string $username){
 
-       try { $sql = "SELECT * FROM users WHERE username = ?";
+        try {
+        
+        $sql = "SELECT * FROM users WHERE username = ?";
         
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$username]);
@@ -18,7 +20,7 @@ class Users extends DbConnect{
         } catch (exception $e) {
 
         var_dump('This user does not exist');
-        
+
         } 
 
         }
