@@ -21,6 +21,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--secondColor);
+  flex-direction: column;
+  font-size: 14px;
 }
 
 main {
@@ -30,7 +32,14 @@ main {
   flex-direction: column;
 }
 
-form {
+main.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+form#login, form#contact {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,29 +51,29 @@ form {
   box-shadow: 0 0 0.1em #fff;
   width: 30em;
 }
-form label {
+form#login label, form#contact label {
   font-weight: bold;
   text-align: left;
   width: 100%;
   line-height: 2;
   color: var(--blacks);
 }
-form label.req::after {
+form#login label.req::after, form#contact label.req::after {
   content: "*";
   color: red;
   margin: 0.4rem;
 }
-form input, form textarea {
+form#login input, form#login textarea, form#contact input, form#contact textarea {
   border: 1px solid var(--secondColor);
   width: 100%;
   padding: 0.4rem;
   border-radius: 0.3rem;
 }
-form input:focus, form textarea:focus {
+form#login input:focus, form#login textarea:focus, form#contact input:focus, form#contact textarea:focus {
   outline: rgb(53, 150, 206) 0.1rem solid;
   box-shadow: inset rgba(53, 150, 206, 0.5) 0 0 0.2rem;
 }
-form .error {
+form#login .error, form#contact .error {
   background-color: #ffb6b6;
   padding: 1rem;
   width: 100%;
@@ -74,7 +83,17 @@ form .error {
   border-radius: 0.3rem;
   font-size: 1rem;
 }
-form button {
+form#login .success, form#contact .success {
+  background-color: rgba(126, 180, 194, 0.5882352941);
+  padding: 1rem;
+  width: 100%;
+  color: #085b8b;
+  margin: 1rem 0;
+  border: 1px solid #7098a0;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+form#login button, form#contact button {
   margin-top: 1rem;
   background-color: var(--thirdColor);
   color: #efefef;
@@ -82,7 +101,7 @@ form button {
   border: 0;
   border-radius: 0.4rem;
 }
-form button:focus {
+form#login button:focus, form#contact button:focus {
   outline: rgb(8, 56, 83) 0.1rem solid;
   box-shadow: inset rgba(53, 150, 206, 0.5) 0 0 0.2rem;
   background-color: var(--fourthColor);
@@ -110,4 +129,43 @@ a:hover {
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+}
+
+.comment__box {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 0.1rem solid #ccc;
+  padding: 1rem;
+  position: relative;
+}
+
+.comment__display {
+  border: 1px solid #cdcdcd;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  margin-top: 0.8rem;
+}
+
+.comment__toolbar {
+  display: flex;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.delete__comment {
+  padding: 0.5rem;
+  width: 2rem;
+  border: 0;
+  background-color: var(--fourthColor);
+  color: white;
+  border-radius: 100px;
+  height: 2rem;
+}
+
+.pending {
+  color: red;
+}
+
+.handled {
+  color: green;
 }/*# sourceMappingURL=style.css.map */
