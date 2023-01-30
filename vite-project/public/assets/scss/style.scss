@@ -154,6 +154,10 @@ a:hover {
     position:relative;
 }
 
+.comments__wrap{
+    max-width:750px;
+}
+
 .comment__display {
 	border: 1px solid #cdcdcd;
 	border-radius: 0.2rem;
@@ -184,4 +188,15 @@ color:red;
 
 .handled{
     color:green;
+}
+
+.change__comment{
+    padding: 0.5rem;
+	width: fit-content;
+	border: 0;
+	background-color: var(--fourthColor);
+	color: white;
+	border-radius: 100px;
+	height: 2rem;
+    margin-left:1rem;
 }
