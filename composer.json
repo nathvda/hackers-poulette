@@ -1,0 +1,20 @@
+{
+    "name": "hackers-poulette/idk",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nathalie Vanden Abeele",
+            "email": "nath.vandenabeele@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/mailer": "^6.2",
+        "symfony/sendinblue-mailer": "^6.2",
+        "phpmailer/phpmailer": "^6.7.1"
+    }
+}

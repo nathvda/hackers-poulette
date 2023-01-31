@@ -6,8 +6,8 @@ if(isset($_POST['submit']) && empty($_POST['name']) && empty($_POST['email'])){
 
     $comm = new Commentvalidator(['lastNamejdke','firstNamejdke','emailjdke','commentjdke'], $_POST);
     $comm = $comm->validate();
+    
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
