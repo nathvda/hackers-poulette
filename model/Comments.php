@@ -14,9 +14,12 @@ class Comments extends DbConnect{
         $stmt->execute([$name,$firstname,$email,$comment]);
 
         $_SESSION['success'] = "Your comment was sent successfully! Thanks for letting us know.";
-            // mail('mail', "confirmation", 'Commentaire bien reçu');
 
         } catch (exception $e){
+
+        if (isset($_SESSION['success'])){
+            unset($_SESSION['success']);
+        }
 
         $_SESSION['success'] = "Sorry, we couldn't add your comment to the database, please contact our support center for more information.";
 

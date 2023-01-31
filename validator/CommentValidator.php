@@ -30,6 +30,10 @@ class Commentvalidator {
             $cmt = new Commentscontr();
             $cmt->createComment($this->data);
 
+        } else { 
+            if (isset($_SESSION['success'])){
+                unset($_SESSION['success']);
+            }
         }
 
         
