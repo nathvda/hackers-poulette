@@ -8,6 +8,7 @@ if(isset($_POST['submit']) && empty($_POST['name']) && empty($_POST['email'])){
     $comm = $comm->validate();
     
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
