@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "hackers-poulette",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,5 +10,17 @@
   },
   "devDependencies": {
     "vite": "^4.0.0"
-  }
+  },
+  "description": "This repository is another project I realized for BeCode. I made it using OOPHP as well as SASS and javascript. The goal is to make a form to retrieve comments from user and allow the administrator to manage those comments.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathvda/hackers-poulette.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathvda/hackers-poulette/issues"
+  },
+  "homepage": "https://github.com/nathvda/hackers-poulette#readme"
 }
